@@ -1,8 +1,9 @@
 # Jekyll configuration for GitHub Pages
 title: Jekyll POC
 description: A Jekyll site using the minimal theme
-url: "https://your-username.github.io"
+url: "https://patelkunal.github.io"
 baseurl: "/jekyll-poc"
+repository: patelkunal/jekyll-poc
 
 # Theme configuration
 remote_theme: pages-themes/minimal@v0.2.0
@@ -54,10 +55,10 @@ defaults:
       layout: "default"
 
 # Site settings
-author: Your Name
-email: your-email@example.com
-twitter_username: your_twitter
-github_username: your_github
+author: Kunal Patel
+email: kunal@example.com
+twitter_username: patelkunal
+github_username: patelkunal
 
 # Build settings
 safe: true
