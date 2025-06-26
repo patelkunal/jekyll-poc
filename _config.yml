@@ -1,12 +1,16 @@
 # Jekyll configuration for GitHub Pages
 title: Jekyll POC
-description: A Jekyll site using the minimal theme
+description: A Jekyll site using the Simplex theme
 url: "https://patelkunal.github.io"
 baseurl: "/jekyll-poc"
 repository: patelkunal/jekyll-poc
 
 # Theme configuration
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: andreondra/jekyll-theme-simplex
+
+# Simplex theme specific settings
+logo_img: # Optional: /assets/img/icons/logo.svg - if not specified, title will be displayed
+copyright: © Kunal Patel 2025
 
 # Plugins
 plugins:
@@ -36,9 +40,10 @@ include:
 
 # Collections
 collections:
-  pages:
+  category:
     output: true
-    permalink: /:name/
+  authors:
+    output: false
 
 # Defaults
 defaults:
@@ -46,13 +51,13 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "default"
-      author: "Your Name"
+      layout: "post"
+      author: "Kunal Patel"
   - scope:
       path: ""
-      type: "pages"
+      type: "category"
     values:
-      layout: "default"
+      layout: "category"
 
 # Site settings
 author: Kunal Patel

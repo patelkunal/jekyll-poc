@@ -1,0 +1,9 @@
+- title: Home
+  url: /
+  hue: "var(--c-themeHueBlue)"
+- title: About
+  url: /about/
+  hue: "var(--c-themeHueGreen)"
+- title: Posts
+  url: /posts/
+  hue: "var(--c-themeHueRed)"

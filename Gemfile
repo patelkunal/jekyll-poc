@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-# GitHub Pages gem
+# GitHub Pages gem (for deployment compatibility)
 gem "github-pages", group: :jekyll_plugins
 
 # Jekyll plugins
