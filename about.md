@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+{% include navigation.html %}
+
 # About This Site
 
 This is a Jekyll site built with the minimal theme from GitHub Pages themes. The site serves as a proof of concept for setting up Jekyll with GitHub Pages.

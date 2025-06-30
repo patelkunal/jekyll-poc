@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include navigation.html %}
+
 # Welcome to Jekyll POC
 
 This is a Jekyll site using the [pages-themes/minimal](https://github.com/pages-themes/minimal) theme.

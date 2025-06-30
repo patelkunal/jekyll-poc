@@ -2,7 +2,10 @@
 layout: default
 title: Posts
 permalink: /posts/
+section: blog
 ---
+
+{% include navigation.html %}
 
 # Blog Posts
 
