@@ -2,6 +2,8 @@
 
 A Jekyll site using the [pages-themes/minimal](https://github.com/pages-themes/minimal) theme, designed for GitHub Pages.
 
+This is developed using copilot extensively.
+
 ## Quick Start
 
 1. **Clone this repository**
