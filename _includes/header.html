@@ -1,0 +1,313 @@
+<header class="site-header">
+    <div class="header-container">
+        <div class="logo-section">
+            <a href="{{ '/' | relative_url }}" class="logo-link">
+                <img src="{{ '/assets/img/baps-logo.png' | relative_url }}" alt="BAPS Logo" class="logo">
+                <span class="site-title">Bengaluru</span>
+            </a>
+        </div>
+        
+        <nav class="main-navigation">
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ '/about/' | relative_url }}">Our Mission</a></li>
+                        <li><a href="{{ '/about/' | relative_url }}#our-values">Our Values</a></li>
+                        <li><a href="{{ '/about/' | relative_url }}#regular-activities">Activities</a></li>
+                        <li><a href="{{ '/about/' | relative_url }}#get-involved">Get Involved</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="{{ '/quick-links/' | relative_url }}" class="nav-link {% if page.url == '/quick-links/' %}active{% endif %}">Quick Links</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.baps.org" target="_blank">BAPS Global</a></li>
+                        <li><a href="https://www.baps.org/Daily-Satsang" target="_blank">Daily Satsang</a></li>
+                        <li><a href="https://www.baps.org/Books-Media" target="_blank">Books & Media</a></li>
+                        <li><a href="https://www.baps.org/Volunteer" target="_blank">Volunteer</a></li>
+                        <li><a href="https://www.baps.org/Donate" target="_blank">Donations</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="{{ '/upcoming-events/' | relative_url }}" class="nav-link {% if page.url == '/upcoming-events/' %}active{% endif %}">Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ '/upcoming-events/' | relative_url }}">Upcoming Events</a></li>
+                        <li><a href="{{ '/archive/' | relative_url }}">Past Events</a></li>
+                        <li><a href="{{ '/posts/' | relative_url }}">All Posts</a></li>
+                        <li><a href="{{ '/archive/' | relative_url }}#posts-by-year">Posts Archive</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ '/contact/' | relative_url }}">Contact Info</a></li>
+                        <li><a href="{{ '/contact/' | relative_url }}#get-directions">Directions</a></li>
+                        <li><a href="{{ '/contact/' | relative_url }}#program-timings">Timings</a></li>
+                        <li><a href="{{ '/contact/' | relative_url }}#connect-with-us">Social Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <!-- Mobile menu toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<style>
+.site-header {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.9;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: block;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.nav-item:hover .nav-link {
+    background: rgba(255,255,255,0.2);
+    text-decoration: none;
+    color: white;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.dropdown-menu a:hover {
+    background: #f8f9fa;
+    color: #ff6b35;
+    text-decoration: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+    
+    .site-title {
+        font-size: 1.5rem;
+    }
+    
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .main-navigation ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        gap: 0;
+    }
+    
+    .main-navigation ul.show {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-link {
+        padding: 1rem;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    /* Mobile dropdown */
+    .dropdown-menu {
+        position: static;
+        background: rgba(255,255,255,0.1);
+        box-shadow: none;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+    
+    .nav-item:hover .dropdown-menu,
+    .nav-item.active .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .dropdown-menu a:hover {
+        background: rgba(255,255,255,0.1);
+        color: white;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.2rem;
+    }
+    
+    .logo {
+        width: 35px;
+        height: 35px;
+        margin-right: 0.5rem;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const menu = document.querySelector('.main-navigation ul');
+    
+    if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+            menu.classList.toggle('show');
+        });
+    }
+    
+    // Mobile dropdown toggle
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(function(item) {
+        const link = item.querySelector('.nav-link');
+        if (link && item.querySelector('.dropdown-menu')) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        }
+    });
+});
+</script>

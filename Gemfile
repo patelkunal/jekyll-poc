@@ -8,7 +8,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
-  gem "jekyll-remote-theme"
+  gem "jekyll-paginate"
 end
 
 # Windows and JRuby does not include zoneinfo files
@@ -19,6 +19,5 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
-
 
 gem 'bigdecimal'

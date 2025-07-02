@@ -1,23 +1,30 @@
-# Jekyll configuration for GitHub Pages
-title: Jekyll POC
-description: A Jekyll site using the minimal theme
+# Jekyll configuration for BAPS Bengaluru
+title: BAPS Bengaluru
+description: Spiritual growth, community service, and cultural enrichment
 url: "https://patelkunal.github.io"
 baseurl: "/jekyll-poc"
 repository: patelkunal/jekyll-poc
 
-# Theme configuration
-remote_theme: pages-themes/minimal@v0.2.0
+# Theme configuration - using custom theme
+# remote_theme: pages-themes/minimal@v0.2.0
 
 # Plugins
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination
+paginate: 5
+paginate_path: "/posts/page:num/"
 
 # Markdown processor
 markdown: kramdown
 highlighter: rouge
+
+# Permalink structure
+permalink: /:year/:month/:day/:title/
 
 # Exclude files from processing
 exclude:
@@ -46,8 +53,8 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "default"
-      author: "Your Name"
+      layout: "post"
+      author: "BAPS Bengaluru"
   - scope:
       path: ""
       type: "pages"
@@ -55,10 +62,26 @@ defaults:
       layout: "default"
 
 # Site settings
-author: Kunal Patel
-email: kunal@example.com
-twitter_username: patelkunal
-github_username: patelkunal
+author: BAPS Bengaluru
+email: bengaluru@baps.org
+description: >
+  BAPS Bengaluru - A spiritual and charitable organization dedicated to serving the community 
+  through various religious, cultural, and humanitarian activities.
+
+# Organization info
+organization:
+  name: "Bochasanwasi Akshar Purushottam Swaminarayan Sanstha"
+  short_name: "BAPS"
+  location: "Bengaluru, Karnataka, India"
+  phone: "+91-80-XXXX-XXXX"
+  email: "bengaluru@baps.org"
 
 # Build settings
 safe: true
+
+# SEO settings
+logo: /assets/img/baps-logo.png
+social:
+  name: BAPS Bengaluru
+  links:
+    - https://www.baps.org
