@@ -4,6 +4,24 @@ A Jekyll site using the [pages-themes/minimal](https://github.com/pages-themes/m
 
 This is developed using copilot extensively.
 
+## Pre-requisites for local development
+Note: This is not mandatory step for regular activities. Only if you aim to run this site locally and see its working in your local machine. It is observed that windows is not preferred environment for Jekyll so preferrably use any Unix/Linux based systems or use WSL.
+
+Assuming, WSL's Ubuntu environment is used
+1. Update apt index
+   ```bash
+   sudo apt update
+   ```
+2. Install ruby and required build dependencies 
+   ```bash
+   sudo apt install ruby-full build-essential zlib1g-dev
+   ```
+3. Setup PATH environments - `$HOME/gems/bin` to your path environment
+4. Install Jekyll
+   ```bash
+   gem install jekyll bundler
+   ```
+
 ## Quick Start
 
 1. **Clone this repository**
