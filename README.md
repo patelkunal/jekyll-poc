@@ -5,9 +5,9 @@ A Jekyll site using the [pages-themes/minimal](https://github.com/pages-themes/m
 This is developed using copilot extensively.
 
 ## Pre-requisites for local development
-Note: This is not mandatory step for regular activities. Only if you aim to run this site locally and see its working in your local machine. It is observed that windows is not preferred environment for Jekyll so preferrably use any Unix/Linux based systems or use WSL. [Feel free to try this docs](https://jekyllrb.com/docs/installation/windows/).
+Note: This is not mandatory step for regular activities. Only if you aim to run this site locally and see its working in your local machine. It is observed that windows is not preferred environment for Jekyll so preferrably use any Unix/Linux based systems or use WSL. [Feel free to try this for windows based setup](https://jekyllrb.com/docs/installation/windows/).
 
-Assuming, WSL's Ubuntu environment is used
+Assuming, WSL's Ubuntu environment is used then follow below to prepare environment
 1. Update apt index
    ```bash
    sudo apt update
